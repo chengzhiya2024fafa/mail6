@@ -80,22 +80,12 @@ domain-key default,${DomainName},/etc/pmta/${DomainName}-dkim.key
 
 <virtual-mta-pool pmta-pool-001>
 virtual-mta pmta-vmta1
-virtual-mta pmta-vmta2
-virtual-mta pmta-vmta3
-virtual-mta pmta-vmta4
-virtual-mta pmta-vmta5
-virtual-mta pmta-vmta6
 </virtual-mta-pool>
 
 ###############################################################
 
 <pattern-list pmta-pattern>
 mail-from /@mail1.${DomainName}/ virtual-mta=pmta-vmta1
-mail-from /@mail2.${DomainName}/ virtual-mta=pmta-vmta2
-mail-from /@mail3.${DomainName}/ virtual-mta=pmta-vmta3
-mail-from /@mail4.${DomainName}/ virtual-mta=pmta-vmta4
-mail-from /@mail5.${DomainName}/ virtual-mta=pmta-vmta5
-mail-from /@mail6.${DomainName}/ virtual-mta=pmta-vmta6
 </pattern-list>">>./config
     sudo cp ./config /etc/pmta
 
